@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Personal Library</title>
+</head>
+<body>
+    <header>
+        <h1>My Personal Library</h1>
+    </header>
+    <main>
+        <div class="book-form">
+            <h2>Add a New Book</h2>
+            <table>
+                <tr>
+                    <th><label for="title">Title:</label></th>
+                    <td><input type="text" id="title" placeholder="Enter title"></td>
+                </tr>
+                <tr>
+                    <th> <label for="author">Author:</label></th>
+                    <td><input type="text" id="author" placeholder="Enter author"></td>
+                </tr>
+                <tr>
+                    <th><label for="year">Year Published:</label></th>
+                    <td><input type="number" id="year" placeholder="Enter year"></td>
+                </tr>
+                <tr>
+                    <th><label for="readStatus">Read:</label></th>
+                    <td><input type="checkbox" id="readStatus"><br><br></td>
+                </tr>
+        </table>
+            <button class="button" onclick="addBookToLibrary()">Add Book</button>
+        </div>
+        <div class="book-list" id="bookList">
+            <!-- Book cards will be displayed here -->
+        </div>
+        <div class="book-actions">
+            <button class="button" onclick="removeLastBook()">Remove Last Book</button>
+            <button class="button" onclick="addBookToFront()">Add Book to Front</button>
+            <button class="button" onclick="removeFirstBook()">Remove First Book</button>
+        </div>
+        <div class="filters">
+    <h2>Filters</h2>
+    <label for="authorFilter">Author:</label>
+    <input type="text" id="authorFilter" placeholder="Enter author">
+    <button class="button" onclick="displayBooksByAuthor()">Apply Filter</button>
+    <br><br>
+    <label for="yearFilter">Year Published:</label>
+    <input type="number" id="yearFilter" placeholder="Enter year">
+    <button class="button" onclick="displayBooksPublishedBefore()">Apply Filter</button>
+    <br><br>
+    <label for="readStatusFilter">Read Status:</label>
+    <input type="checkbox" id="readStatusFilter">
+    <button class="button" onclick="displayBooksByReadStatus()">Apply Filter</button>
+</div>
+<div class="results">
+    <h2>Results of the Filter</h2>
+    <div id="filterResults">
+        <!-- Filter results will be displayed here -->
+        <b>1.Arsitotle and Dante</b><br>
+        <b>2.Arsitotle and Dante- - II</b>
+    </div>
+</div>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
